@@ -32,9 +32,7 @@ mysql> select * from employee where department_id=60;
 |         100 | king      | AD_ASST | 8956.00 |     0.30 |    108 |           100 |
 +-------------+-----------+---------+---------+----------+--------+---------------+
 6. . Display unique job_id from EMPLOYEE table. Give alias name to the column as
-JOB_TITLE
--->
-mysql> select distinct job_id from employee;
+JOB_TITLE mysql> select distinct job_id from employee;
 +----------+
 | job_id   |
 +----------+
@@ -63,8 +61,7 @@ mysql> select job_id as 'JOB_TITLE' from employee;
 7. . Display last_name, salary and salary increase of Rs300. Give the new column name
 as ‘Increased Salary’.
 
-mysql> SELECT last_name, salary, salary + 300 AS "Increased Salary"
-    -> FROM employee;
+mysql> SELECT last_name, salary, salary + 300 AS "Increased Salary" FROM employee;
 +-----------+---------+------------------+
 | last_name | salary  | Increased Salary |
 +-----------+---------+------------------+
@@ -82,8 +79,7 @@ mysql> SELECT last_name, salary, salary + 300 AS "Increased Salary"
 8. Display last_name, salary and annual compensation of all employees, plus a
 onetime bonus of Rs 100. Give an alias name to the column displaying annual
 compensation.
--->mysql> SELECT last_name, salary, (salary * 12) + 100 AS "Annual Compensation"
-    -> FROM employee;
+-->mysql> SELECT last_name, salary, (salary * 12) + 100 AS "Annual Compensation" FROM employee;
 +-----------+---------+---------------------+
 | last_name | salary  | Annual Compensation |
 +-----------+---------+---------------------+
@@ -99,7 +95,7 @@ compensation.
 | Kochar    | 3400.00 |            40900.00 |
 +-----------+---------+---------------------+
 9.Display the details of those employees who get commission.
--->       select * from employee where comm_pct IS NOT NULL;
+--> select * from employee where comm_pct IS NOT NULL;
 +-------------+-----------+----------+---------+----------+--------+---------------+
 | EMPLOYEE_ID | LAST_NAME | JOB_ID   | SALARY  | COMM_PCT | MGR_ID | DEPARTMENT_ID |
 +-------------+-----------+----------+---------+----------+--------+---------------+
